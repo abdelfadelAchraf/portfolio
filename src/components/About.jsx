@@ -19,7 +19,7 @@ const About = () => {
           stiffness: 100,
           damping: 10
         }}
-        className="text-4xl md:text-4xl lg:text-9xl lg:uppercase font-bold mb-8 text-yellow-500"
+        className="text-4xl md:text-4xl lg:text-9xl uppercase font-bold mb-8 text-yellow-500"
       >
         About
       </motion.h2>

@@ -15,7 +15,7 @@ const Skills = () => {
                stiffness: 100,
                damping: 10
              }}
-             className=" text-4xl md:text-4xl lg:text-9xl lg:uppercase font-bold mb-8 ml-4 capitalize text-yellow-500"
+             className=" text-4xl md:text-4xl lg:text-9xl uppercase font-bold mb-8 ml-4  text-yellow-500"
            >
              skills
            </motion.h2>
