@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "",object:"", email: "", message: "" });
   const [errors, setErrors] = useState({});
   const [isSending, setIsSending] = useState(false);
 
@@ -27,6 +27,7 @@ const Contact = () => {
       newErrors.email = "Invalid email format";
     }
     if (!formData.message.trim()) newErrors.message = "Message is required";
+    if (!formData.object.trim()) newErrors.object = "Object is required";
     return newErrors;
   };
 
@@ -50,14 +51,14 @@ const Contact = () => {
         ,  import.meta.env.VITE_EMAILJS_USER_ID)
       .then(() => {
         toast.success("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "",object:"" , email: "", message: "" });
       })
       .catch(() => toast.error("Failed to send message. Please try again."))
       .finally(() => setIsSending(false));
   };
 
   return (
-    <section className="mx-auto max-w-3xl px-4 pt-20" id="contact">
+    <section className="w-full mx-auto  px-4 pt-20" id="contact">
       <Toaster />
       <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}
@@ -76,7 +77,7 @@ const Contact = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="space-y-4"
+        className="space-y-4 max-w-3xl mx-auto"
       >
         {/* Name Input */}
         <div>
@@ -86,23 +87,36 @@ const Contact = () => {
             value={formData.name}
             placeholder="Name"
             onChange={handleChange}
-            className="w-full rounded-lg border border-gray-800 bg-transparent px-3 py-4  text-sm focus:outline-none"
+            className="w-full rounded-lg border border-white/40 bg-transparent px-3 py-4  text-sm focus:outline-none"
           />
           {errors.name && <p className="text-sm text-pink-700">{errors.name}</p>}
         </div>
 
         {/* Email Input */}
-        <div>
+       <div className="lg:grid lg:grid-cols-2 lg:gap-4 sm:flex sm:flex-col space-y-4">
+       <div>
           <input
             type="email"
             name="email"
             value={formData.email}
             placeholder="Email"
             onChange={handleChange}
-            className="w-full rounded-lg border border-gray-800 bg-transparent px-3 py-4 text-sm focus:outline-none"
+            className="w-full rounded-lg border border-white/40 bg-transparent px-3 py-4 text-sm focus:outline-none"
           />
           {errors.email && <p className="text-sm text-pink-700">{errors.email}</p>}
         </div>
+        <div>
+          <input
+            type="text"
+            name="object"
+            value={formData.object}
+            placeholder="Object"
+            onChange={handleChange}
+            className="w-full rounded-lg border border-white/40 bg-transparent px-3 py-4 text-sm focus:outline-none"
+          />
+          {errors.object && <p className="text-sm text-pink-700">{errors.object}</p>}
+        </div>
+       </div>
 
         {/* Message Input */}
         <div>
@@ -111,7 +125,7 @@ const Contact = () => {
             value={formData.message}
             placeholder="Message"
             onChange={handleChange}
-            className="w-full rounded-lg border border-gray-800 bg-transparent px-3 py-2 text-sm focus:outline-none"
+            className="w-full rounded-lg border border-white/40 bg-transparent px-3 py-2 text-sm focus:outline-none"
             rows="6"
             wrap="hard"
           />
@@ -121,10 +135,10 @@ const Contact = () => {
         {/* Submit Button */}
         <motion.button
           type="submit"
-          className={`w-full rounded bg-yellow-400 px-4 py-4 text-lg font-semibold text-gray-900 
+          className={`w-full rounded bg-yellow-400 px-4 py-4 text-md font-semibold text-gray-900 
             hover:bg-yellow-500 transition ${isSending ? "cursor-not-allowed opacity-50" : ""}`}
           disabled={isSending}
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.005 }}
         >
           {isSending ? "Sending..." : "Send"}
         </motion.button>

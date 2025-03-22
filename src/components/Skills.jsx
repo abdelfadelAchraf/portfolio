@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Skills = () => {
   return (
     <section 
-    className="mx-auto max-w-3xl px-4   pt-20" id="skills">
+    className="w-full mx-auto  px-4  pt-20" id="skills">
       {/* Title */}
      <motion.h2
              initial={{ scale: 0.8, opacity: 0 }}
@@ -26,12 +26,12 @@ const Skills = () => {
         whileInView={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.3}} 
         viewport={{ once: true }}
-        className="mx-2 pt-2 flex flex-col rounded-xl bg-gradient-to-b from-zinc-900 to-zinc-950 px-4 lg:px-20"
+        className="mx-2 pt-2 flex flex-col rounded-xl bg-gradient-to-br from-zinc-900 to-zinc-950 px-4 lg:px-20"
       >
         {SKILLS.map((skill, index) => (
           <motion.div 
             key={index} 
-            className="flex items-center justify-between py-4 border-b border-gray-700"
+            className="flex items-center justify-between py-4 border-b border-white/10"
             whileHover={{ scale: 1.05 }}
             initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
