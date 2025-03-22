@@ -143,38 +143,7 @@ const Navbar = React.memo(() => {
                     transition={{ duration: 0.5 }}
                     whileHover={{ scale: 1.05 }}
                 >
-                    <motion.span 
-                        className="letter text-yellow-400"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.1, duration: 0.3 }}
-                    >
-                        H
-                    </motion.span>
-                    <motion.span 
-                        className="letter text-yellow-400"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.2, duration: 0.3 }}
-                    >
-                        R
-                    </motion.span>
-                    <motion.span 
-                        className="letter text-yellow-400"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3, duration: 0.3 }}
-                    >
-                        A
-                    </motion.span>
-                    <motion.span 
-                        className="letter text-yellow-400"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.4, duration: 0.3 }}
-                    >
-                        F
-                    </motion.span>
+                   HRAF
                 </motion.a>
 
                 {/* Mobile Menu Toggle */}
