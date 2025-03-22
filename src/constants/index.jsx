@@ -63,7 +63,7 @@ export const ABOUT = {
   text1:
     "Engineering Student @ ENSAB | CEC Designer",
   text2:
-    "I am a first-year engineering student at the National School of Applied Sciences of Berrechid (ENSAB). As a designer at the CEC Computer Engineering club, I collaborate on creative and technical projects, helping organize and promote events. I am passionate about problem-solving, teamwork, and continuously improving my communication and design skills. My goal is to contribute to innovative web solutions through a combination of creativity and collaboration.",
+    "As a first-year student in the engineering cycle at ENSAB, I am embarking on an exciting journey to blend technology with creativity. At the CEC Computer Engineering Club, I collaborate on a variety of creative and technical projects, helping organize and promote events while honing my design and problem-solving skills. Passionate about teamwork, innovation, and continuous personal growth, I aim to combine my design expertise with engineering knowledge to build impactful web solutions. I'm always ready to tackle new challenges, grow through collaboration, and push the boundaries of what's possible. ",
 };
 
 export const PROJECTS = [ {

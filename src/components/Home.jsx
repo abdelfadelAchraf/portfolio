@@ -25,24 +25,34 @@ const Home = () => {
         transition={{ duration: 1 }}
       ></section>
 
-      <div className='absolute bottom-0 left-3.5 z-20 mx-4 max-w-3xl pb-20'>
-        <motion.h1
-          className='text-5xl font-semibold uppercase tracking-wide md:text-7xl'
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          {profileData.name}
-        </motion.h1>
+      <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.2 }}
+      className='absolute bottom-0 left-3.5 z-20 mx-4 max-w-3xl pb-20'>
+
+         <motion.h1
+                initial={{ scale: 0.6, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10
+                }}
+                // className="md:text-4xl lg:text-9xl lg:uppercase font-bold mb-8 text-yellow-500"
+                  className='text-5xl font-bold uppercase tracking-wide w-full md:text-7xl'
+              >
+                ACHRAF ABDELFADEL
+              </motion.h1>
         <motion.p
           className='pt-2 font-semibold'
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
         >
           {profileData.info}
         </motion.p>
-      </div>
+      </motion.div>
     </section>
   );
 };

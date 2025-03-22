@@ -9,3 +9,44 @@ html{
 button{
   cursor: pointer;
 }
+
+/* styles.css */
+@layer utilities {
+  @keyframes colorChange {
+    0% {
+      color: #F59E0B; /* Tailwind Yellow 500 */
+    }
+    50% {
+      color: #000000; /* Black */
+    }
+    100% {
+      color: #F59E0B; /* Tailwind Yellow 500 */
+    }
+  }
+
+  .animate-color-change {
+    animation: colorChange 3s infinite;
+  }
+}
+/* styles.css */
+.letter {
+  display: inline-block;
+  background-image: linear-gradient(to right, #F59E0B 50%, #000000 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  color: transparent;
+  -webkit-background-clip: text;
+  animation: colorChange 3s infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}

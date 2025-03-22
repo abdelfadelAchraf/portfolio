@@ -4,17 +4,27 @@ import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
-    <section className="container mx-auto pt-6" id="skills">
+    <section 
+    className="container mx-auto pt-20" id="skills">
       {/* Title */}
-      <h2 className="mt-10 text-center text-5xl mb-6 font-semibold leading-tight">
-        <span className="text-yellow-500 text-8xl mr-2 underline">S</span>kills
-      </h2>
+     <motion.h2
+             initial={{ scale: 0.8, opacity: 0 }}
+             whileInView={{ scale: 1, opacity: 1 }}
+             transition={{
+               type: "spring",
+               stiffness: 100,
+               damping: 10
+             }}
+             className=" text-4xl md:text-4xl lg:text-9xl lg:uppercase font-bold mb-8 ml-4 capitalize text-yellow-500"
+           >
+             skills
+           </motion.h2>
 
       {/* Skills List */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }} 
         whileInView={{ opacity: 1, y: 0 }} 
-        transition={{ duration: 1 }} 
+        transition={{ duration: 0.3}} 
         viewport={{ once: true }}
         className="mx-2 pt-2 flex flex-col rounded-xl bg-gradient-to-b from-zinc-900 to-zinc-950 px-4 lg:px-20"
       >
@@ -23,7 +33,9 @@ const Skills = () => {
             key={index} 
             className="flex items-center justify-between py-4 border-b border-gray-700"
             whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
           >
             {/* Skill Icon and Name */}
             <div className="flex items-center gap-4">

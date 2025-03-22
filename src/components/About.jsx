@@ -1,31 +1,48 @@
-import React from 'react'
-import { ABOUT } from '../constants'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { ABOUT } from '../constants';
+import { motion } from 'framer-motion';
+
 const About = () => {
   return (
-    <section  id="about" className='container mx-auto ' > 
-         <motion.h2 className='mt-20 text-center text-5xl mb-6 leading-tight font-semibold'
-         initial={{opacity:0, y:-20  }}
-         whileInView={{opacity:1, y:0 }}
-         transition={{duration:.5}}
-         viewport={{once:true}}
-         ><span className='text-yellow-500 text-8xl mr-2 underline'>A</span>bout</motion.h2>
-         <motion.h3 
-         className='p-4 md:text-[6rem] sm:text-[3rem] text-6xl uppercase font-semibold lg:text-[8rem]'
-          initial={{opacity:0, x:-20  }}
-          whileInView={{opacity:1, x:0 }}
-          transition={{duration:1}}
-          viewport={{once:true}}
-         >{ABOUT.text1}</motion.h3>
-         <motion.p 
-         className='mr-24 pl-4 leading-loose text-2xl text-gray-400'
-          initial={{opacity:0, x:100  }}
-          whileInView={{opacity:1, x:0 }}
-          transition={{duration:1}}
-          viewport={{once:true}}
-         >{ABOUT.text2}  </motion.p>
-    </section>
-  )
-}
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.2 }}
+      id='about'
+      className="w-full mx-auto py-16 px-4 shadow-[0_-50px_50px_-3px_rgba(0,0,0,0.5)]"
+    >
+      <motion.h2
+        initial={{ scale: 0.8, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 100,
+          damping: 10
+        }}
+        className="text-4xl md:text-4xl lg:text-9xl lg:uppercase font-bold mb-8 text-yellow-500"
+      >
+        About
+      </motion.h2>
 
-export default About
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="mb-6 md:text-4xl lg:text-6xl font-bold uppercase"
+      >
+        {ABOUT.text1}
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+        className="mb-6 text-2xl leading-10 lg:w-10/12"
+      >
+        {ABOUT.text2}
+      </motion.div>
+    </motion.section>
+  );
+};
+
+export default About;

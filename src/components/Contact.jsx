@@ -44,7 +44,10 @@ const Contact = () => {
     setErrors({});
 
     emailjs
-      .send("service_555mrl71f", "template_n5bmscs", formData, "f11-YM5N3g4PAVum")
+      .send(  import.meta.env.VITE_EMAILJS_SERVICE_ID
+        , import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+        , formData
+        ,  import.meta.env.VITE_EMAILJS_USER_ID)
       .then(() => {
         toast.success("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
@@ -54,17 +57,20 @@ const Contact = () => {
   };
 
   return (
-    <section className="mx-auto max-w-3xl px-4 pt-6" id="contact">
+    <section className="mx-auto max-w-3xl px-4 pt-20" id="contact">
       <Toaster />
       <motion.h2
-        className="my-8 text-center text-4xl font-semibold tracking-tighter"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        Let's Connect
-      </motion.h2>
-
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 10
+              }}
+              className="text-4xl md:text-4xl lg:text-9xl lg:uppercase font-bold mb-8 text-yellow-500"
+            >
+              Let's <span className="text-white/40">talk</span>
+            </motion.h2>
       <motion.form
         onSubmit={handleSubmit}
         initial={{ opacity: 0, scale: 0.95 }}
@@ -107,6 +113,7 @@ const Contact = () => {
             onChange={handleChange}
             className="w-full rounded-lg border border-gray-800 bg-transparent px-3 py-2 text-sm focus:outline-none"
             rows="6"
+            wrap="hard"
           />
           {errors.message && <p className="text-sm text-pink-700">{errors.message}</p>}
         </div>
