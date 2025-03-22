@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import hraf from '../assets/hraf.png';
+import hraf from '../assets/hraf.webp';
 import { PROFILE } from '../constants';
 import { motion } from 'framer-motion';
 
