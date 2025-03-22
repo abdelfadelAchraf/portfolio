@@ -109,7 +109,7 @@ const Projects = () => {
       </motion.h2>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mx-auto max-w-3xl px-4   pt-20">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 ">
         
          {isMobile ? (
           PROJECTS.map((project, index) => (
