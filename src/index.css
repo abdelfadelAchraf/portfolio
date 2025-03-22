@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+::-webkit-scrollbar{
+  @apply hidden;
+}
+html{
+  scroll-behavior: smooth;
+}
+button{
+  cursor: pointer;
+}
