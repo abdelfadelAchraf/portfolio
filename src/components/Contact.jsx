@@ -67,7 +67,7 @@ const Contact = () => {
                 stiffness: 100,
                 damping: 10
               }}
-              className="text-4xl md:text-4xl lg:text-9xl uppercase font-bold mb-8 text-yellow-500"
+              className="text-4xl md:text-6xl lg:text-9xl uppercase font-bold mb-8 text-yellow-500 border-l-2 border-r-2 pl-2 py-2 bg-gradient-to-bl from-[rgba(245,175,25,0.48)] w-full text-center "
             >
               Let's <span className="text-white/40">talk</span>
             </motion.h2>
