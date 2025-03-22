@@ -3,6 +3,9 @@
 ::-webkit-scrollbar{
   @apply hidden;
 }
+*{
+  user-select: none;
+}
 html{
   scroll-behavior: smooth;
 }

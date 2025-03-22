@@ -67,7 +67,7 @@ const Contact = () => {
                 stiffness: 100,
                 damping: 10
               }}
-              className="text-4xl md:text-6xl lg:text-9xl uppercase font-bold mb-8 text-yellow-500 border-l-2 border-r-2 pl-2 py-2 bg-gradient-to-bl from-[rgba(245,175,25,0.48)] w-full text-center "
+              className="text-6xl md:text-6xl lg:text-9xl uppercase font-bold mb-8 text-yellow-500 border-l-2 border-r-2 pl-2 py-2 bg-gradient-to-bl from-[rgba(245,175,25,0.48)] w-full text-center "
             >
               Let's <span className="text-white/40">talk</span>
             </motion.h2>
@@ -121,7 +121,7 @@ const Contact = () => {
         {/* Submit Button */}
         <motion.button
           type="submit"
-          className={`w-full rounded bg-yellow-400 px-4 py-4 text-md font-semibold text-gray-900 
+          className={`w-full rounded bg-yellow-400 px-4 py-4 text-lg font-semibold text-gray-900 
             hover:bg-yellow-500 transition ${isSending ? "cursor-not-allowed opacity-50" : ""}`}
           disabled={isSending}
           whileHover={{ scale: 1.02 }}

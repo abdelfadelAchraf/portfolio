@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Skills = () => {
   return (
     <section 
-    className="container mx-auto pt-20" id="skills">
+    className="mx-auto max-w-3xl px-4   pt-20" id="skills">
       {/* Title */}
      <motion.h2
              initial={{ scale: 0.8, opacity: 0 }}
@@ -15,7 +15,7 @@ const Skills = () => {
                stiffness: 100,
                damping: 10
              }}
-             className=" text-4xl md:text-6xl lg:text-9xl uppercase font-bold mb-8 ml-4  text-yellow-500 border-l-2  border-r-2 pl-2 py-2 bg-gradient-to-tr from-[rgba(245,175,25,0.48)] w-full text-center"
+             className=" text-6xl md:text-6xl lg:text-9xl uppercase font-bold mb-8   text-yellow-500 border-l-2  border-r-2 pl-2 py-2 bg-gradient-to-tr from-[rgba(245,175,25,0.48)] w-full text-center"
            >
              skills
            </motion.h2>
