@@ -40,6 +40,13 @@ const About = () => {
         className="mb-6 text-2xl leading-10 lg:w-10/12"
       >
         {ABOUT.text2}
+        {/* {ABOUT.text2.split("\n").map((line, index) => (
+          <span key={index}>
+            {line}
+            <br />
+          </span>
+          
+        ))} */}
       </motion.div>
     </motion.section>
   );

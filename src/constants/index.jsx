@@ -61,9 +61,19 @@ export const CERTIFICATIONS =[
 ]
 export const ABOUT = {
   text1:
-    "Engineering Student @ ENSAB | CEC Designer",
-  text2:
-    "As a first-year student in the engineering cycle at ENSAB, I am embarking on an exciting journey to blend technology with creativity. At the CEC Computer Engineering Club, I collaborate on a variety of creative and technical projects, helping organize and promote events while honing my design and problem-solving skills. Passionate about teamwork, innovation, and continuous personal growth, I aim to combine my design expertise with engineering knowledge to build impactful web solutions. I'm always ready to tackle new challenges, grow through collaboration, and push the boundaries of what's possible. ",
+    (
+      <>
+      Engineering Student @ <span className="text-yellow-500">ENSAB</span> | CEC  <span className="text-yellow-500">Designer</span>| Web  <span className="text-yellow-500">Developer</span>
+      </>
+    ),
+  text2:(
+    <>
+      As a first-year student in the engineering cycle at ENSAB, I am embarking on an exciting journey to blend technology with creativity.<br/>
+    At the  <span className="text-yellow-500 font-bold">CEC</span> Computer Engineering Club, I collaborate on a variety of creative and technical projects, helping organize and promote events while honing my design and problem-solving skills.<br/>
+    Passionate about teamwork, innovation, and continuous personal growth, I aim to combine my design expertise with engineering knowledge to build impactful web solutions.<br/>
+     I'm always ready to tackle new challenges, grow through collaboration, and push the boundaries of what's possible.<br/>
+    </>
+  ),
 };
 
 export const PROJECTS = [ {
