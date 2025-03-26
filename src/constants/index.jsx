@@ -80,7 +80,7 @@ export const PROJECTS = [ {
     title: "An E-commerce website ",
     description:
       "An E-commerce website using the MERN stack Tech",
-    image: image2,
+    image: image1,
     link:"https://github.com/abdelfadelAchraf/E-commerce-website",
     btnContent:"View on GitHub"
 
@@ -89,7 +89,7 @@ export const PROJECTS = [ {
     title: "Personel portfolio",
     description:
       "A full  platform built with React,Js Tailwinds, &nd framer motion.",
-    image: image1,
+    image: image2,
     link:"https://github.com/abdelfadelAchraf/portfolio",
     btnContent:"View on GitHub"
   },
